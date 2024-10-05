@@ -9,4 +9,4 @@ def create_book(data: BookData):
     with Session.begin() as session:
         book = Book(**data.model_dump())
         session.add(book)
-        return book
+        return book 
