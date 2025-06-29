@@ -1,5 +1,6 @@
 from . import (
     default, 
     login,
-    create
+    create,
+    info
 )

@@ -1,9 +1,8 @@
-
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker, DeclarativeBase, Mapped, mapped_column
 
 
-engine = create_engine("sqlite:///books.db", echo=True)
+engine = create_engine("sqlite:///tasks.db", echo=True)
 Session = sessionmaker(bind=engine)
 
 
@@ -17,7 +16,7 @@ def up():
 def down():
     Base.metadata.drop_all(engine)
 
-from .models import Book
+from .models import Task
 
 
 up()

@@ -6,11 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="/frontend/routes/create.py">
-        <label for="content">Content</label>
-        <input id="content" name="content" type="text">
-        
-        <h1>____________________</h1>
+    <form action="{{ url_for('create_task') }}" method="POST">
+        <label for="content">Content:</label>
+        <input type="text" id="content" name="content" value="content">
+        <br><br>
+        <button type="submit">Submit</button>
     </form>
 </body>
 </html>
